@@ -52,4 +52,40 @@ class Users extends BaseController
             'user' => $userModel->find($id)
         ]);
     }
+
+    public function update($id)
+    {
+        $userModel = new UserModel();
+
+        $file = $this->request->getFile('avatar');
+
+        if ($file && $file->isValid()) {
+            $rules = [
+                'avatar' => [
+                    'uploaded[avatar]',
+                    'max_size[avatar,2048]',
+                    'mime_in[avatar,image/png,image/jpeg]'
+                ]
+            ];
+        }
+
+        $avatarName = $user['avatar'];
+
+        if ($file->isValid()) {
+            $avatarName = $file->getRandomName();
+
+            $file->move(
+                ROOTPATH . 'public/uploads',
+                $avatarName
+            );
+        }
+
+        $userModel->update($id, [
+            'username' => $this->request->getPost('username'),
+            'full_name' => $this->request->getPost('full_name'),
+            'avatar' => $avatarName
+        ]);
+
+        return redirect()->to('/customers');
+    }
 }
