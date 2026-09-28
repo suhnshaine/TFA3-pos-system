@@ -36,8 +36,8 @@
 
             <?php foreach ($users as $user): ?>
                 <tr>
-                    <td><?= ($user['username']) ?></td>
-                    <td><?= ($user['full_name']) ?></td>
+                    <td><?= esc($user['username']) ?></td>
+                    <td><?= esc($user['full_name']) ?></td>
                     <td>
 
                         <?php

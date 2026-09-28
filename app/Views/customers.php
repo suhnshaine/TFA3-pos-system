@@ -35,9 +35,9 @@
 
             <?php foreach ($customers as $customer): ?>
                 <tr>
-                    <td><?= ($customer['full_name']) ?></td>
-                    <td><?= ($customer['email']) ?></td>
-                    <td><?= ($customer['phone']) ?></td>
+                    <td><?= esc($customer['full_name']) ?></td>
+                    <td><?= esc($customer['email']) ?></td>
+                    <td><?= esc($customer['phone']) ?></td>
                     <td>
                         <a href="<?= 'customers/edit/' . $customer['id'] ?>" class="btn btn-edit">
                             Edit
