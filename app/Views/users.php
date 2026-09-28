@@ -13,13 +13,18 @@
         <h1>POS System</h1>
 
         <nav>
-            <a href="/">Home</a> |
-            <a href="/about">About</a> |
-            <a href="/customers">Customers</a> |
+            <a href="/">Home</a> 
+            <a href="/about">About</a> 
+            <a href="/customers">Customers</a> 
             <a href="/users">Users</a>
         </nav>
 
-        <h1>User Accounts</h1>
+        <div class="page-header">
+            <h1>User Accounts</h1>
+            <a href="<?= site_url('users/new') ?>" class="btn btn-primary">
+                Add New User
+            </a>
+        </div>
 
         <table border="1" cellpadding="10">
             <tr>
@@ -42,11 +47,11 @@
                             : base_url('uploads/placeholder.png');
                         ?>
 
-                        <img src="<?= $avatar ?>" width="80" height="80" alt="Avatar">
+                        <img src="<?= $avatar ?>" alt="Avatar" class="avatar">
 
                     </td>
                     <td>
-                        <a href="<?= 'customers/edit/' . $user['id'] ?>">
+                        <a href="<?= 'customers/edit/' . $user['id'] ?>" class="btn btn-edit">
                             Edit
                         </a>
                     </td>

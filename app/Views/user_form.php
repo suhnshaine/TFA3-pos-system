@@ -22,23 +22,37 @@
         <h1>User Form</h1>
         <form method="post" enctype="multipart/form-data">
 
-            <input
-                type="text"
-                name="username"
-                value="<?= $user['username'] ?? '' ?>">
+            <div class="form-group">
+                <label>Username</label>
+                <input
+                    type="text"
+                    name="username"
+                    value="<?= $user['username'] ?? '' ?>">
+            </div>
 
-            <input
-                type="text"
-                name="full_name"
-                value="<?= $user['full_name'] ?? '' ?>">
+            <div class="form-group">
+                <label>Full Name</label>
+                <input
+                    type="text"
+                    name="full_name"
+                    value="<?= $user['full_name'] ?? '' ?>">
+            </div>
 
-            <input
-                type="file"
-                name="avatar">
+            <div class="form-group">
+                <label>Avatar</label>
+                <input
+                    type="file"
+                    name="avatar">
+            </div>
 
-            <button type="submit">
+            <div class="form-actions">
+            <button type="submit" class="btn btn-primary">
                 Save
             </button>
+            <a href="<?= site_url('customers') ?>" class="btn btn-edit">
+                Cancel
+            </a>
+            </div>
 
         </form>
 

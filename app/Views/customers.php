@@ -13,14 +13,18 @@
         <h1>POS System</h1>
 
         <nav>
-            <a href="/">Home</a> |
-            <a href="/about">About</a> |
-            <a href="/customers">Customers</a> |
+            <a href="/">Home</a> 
+            <a href="/about">About</a> 
+            <a href="/customers">Customers</a> 
             <a href="/users">Users</a>
         </nav>
+        <div class="page-header">
+            <h1>Customer Accounts</h1>
+            <a href="<?= site_url('customers/new') ?>" class="btn btn-primary">
+                Add New Customer
+            </a>
 
-        <h1>Customer Accounts</h1>
-
+        </div>
         <table border="1" cellpadding="10">
             <tr>
                 <th>Full Name</th>
@@ -35,7 +39,7 @@
                     <td><?= ($customer['email']) ?></td>
                     <td><?= ($customer['phone']) ?></td>
                     <td>
-                        <a href="<?= 'customers/edit/' . $customer['id'] ?>">
+                        <a href="<?= 'customers/edit/' . $customer['id'] ?>" class="btn btn-edit">
                             Edit
                         </a>
                     </td>
