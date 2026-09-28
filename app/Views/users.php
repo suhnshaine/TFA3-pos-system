@@ -51,7 +51,7 @@
 
                     </td>
                     <td>
-                        <a href="<?= 'customers/edit/' . $user['id'] ?>" class="btn btn-edit">
+                        <a href="<?= 'users/edit/' . $user['id'] ?>" class="btn btn-edit">
                             Edit
                         </a>
                     </td>

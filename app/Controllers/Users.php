@@ -57,6 +57,8 @@ class Users extends BaseController
     {
         $userModel = new UserModel();
 
+        $user = $userModel->find($id);
+
         $file = $this->request->getFile('avatar');
 
         if ($file && $file->isValid()) {
@@ -91,6 +93,6 @@ class Users extends BaseController
             'avatar' => $avatarName
         ]);
 
-        return redirect()->to('/customers');
+        return redirect()->to('/users');
     }
 }

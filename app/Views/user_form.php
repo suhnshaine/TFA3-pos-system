@@ -56,7 +56,7 @@
                 <button type="submit" class="btn btn-primary">
                     Save
                 </button>
-                <a href="<?= site_url('customers') ?>" class="btn btn-edit">
+                <a href="<?= site_url('users') ?>" class="btn btn-edit">
                     Cancel
                 </a>
             </div>
