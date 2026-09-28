@@ -13,14 +13,21 @@
         <h1>POS System</h1>
 
         <nav>
-            <a href="/">Home</a> |
-            <a href="/about">About</a> |
-            <a href="/customers">Customers</a> |
+            <a href="/">Home</a> 
+            <a href="/about">About</a> 
+            <a href="/customers">Customers</a> 
             <a href="/users">Users</a>
         </nav>
 
         <h1>User Form</h1>
-        <form method="post" enctype="multipart/form-data">
+        <?php if (isset($validation)): ?>
+
+            <div class="validation-errors">
+                <?= $validation->listErrors() ?>
+            </div>
+
+        <?php endif; ?>
+        <form method="post" action="<?= isset($user) ? site_url('users/update/' . $user['id']) : site_url('users/create') ?>" enctype="multipart/form-data">
 
             <div class="form-group">
                 <label>Username</label>
@@ -46,12 +53,12 @@
             </div>
 
             <div class="form-actions">
-            <button type="submit" class="btn btn-primary">
-                Save
-            </button>
-            <a href="<?= site_url('customers') ?>" class="btn btn-edit">
-                Cancel
-            </a>
+                <button type="submit" class="btn btn-primary">
+                    Save
+                </button>
+                <a href="<?= site_url('customers') ?>" class="btn btn-edit">
+                    Cancel
+                </a>
             </div>
 
         </form>

@@ -13,13 +13,20 @@
         <h1>POS System</h1>
 
         <nav>
-            <a href="/">Home</a> |
-            <a href="/about">About</a> |
-            <a href="/customers">Customers</a> |
+            <a href="/">Home</a>
+            <a href="/about">About</a>
+            <a href="/customers">Customers</a>
             <a href="/users">Users</a>
         </nav>
 
         <h1>Customer Form</h1>
+        <?php if (isset($validation)): ?>
+
+            <div class="validation-errors">
+                <?= $validation->listErrors() ?>
+            </div>
+
+        <?php endif; ?>
         <form method="post" action="<?= isset($customer) ? site_url('customers/update/' . $customer['id']) : site_url('customers/create') ?>">
 
             <div class="form-group">
