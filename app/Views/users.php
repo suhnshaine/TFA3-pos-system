@@ -26,6 +26,7 @@
                 <th>Username</th>
                 <th>Full Name</th>
                 <th>Avatar</th>
+                <th>Actions</th>
             </tr>
 
             <?php foreach ($users as $user): ?>
@@ -43,6 +44,11 @@
 
                         <img src="<?= $avatar ?>" width="80" height="80" alt="Avatar">
 
+                    </td>
+                    <td>
+                        <a href="<?= 'customers/edit/' . $user['id'] ?>">
+                            Edit
+                        </a>
                     </td>
                 </tr>
             <?php endforeach; ?>
