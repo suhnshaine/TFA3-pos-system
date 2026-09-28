@@ -3,13 +3,13 @@
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/suhnshaine/TFA2-pos-system.git
+git clone https://github.com/suhnshaine/TFA3-pos-system.git
 ```
 
 ### Navigate to the Project Folder
 
 ```bash
-cd TFA2-POS-System
+cd TFA3-pos-system
 ```
 
 ## Database Setup
