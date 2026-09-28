@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 14, 2026 at 09:02 AM
+-- Generation Time: Sep 28, 2026 at 10:03 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -56,19 +56,20 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `username` varchar(50) NOT NULL,
   `full_name` varchar(100) NOT NULL,
-  `created_at` datetime NOT NULL
+  `created_at` datetime NOT NULL,
+  `avatar` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `full_name`, `created_at`) VALUES
-(1, 'admin', 'System Administrator', '2026-09-14 14:50:16'),
-(2, 'msantos', 'Maria Santos', '2026-09-14 14:50:16'),
-(3, 'jcruz', 'Juan Cruz', '2026-09-14 14:50:16'),
-(4, 'mlopez', 'Mark Lopez', '2026-09-14 14:50:16'),
-(5, 'areyes', 'Ana Reyes', '2026-09-14 14:50:16');
+INSERT INTO `users` (`id`, `username`, `full_name`, `created_at`, `avatar`) VALUES
+(1, 'admin', 'System Administrator', '2026-09-14 14:50:16', NULL),
+(2, 'msantos', 'Maria Santos', '2026-09-14 14:50:16', '1790582099_96d5d44296154baabd48.png'),
+(3, 'jcruz', 'Juan Cruz', '2026-09-14 14:50:16', NULL),
+(4, 'mlopez', 'Mark Lopez', '2026-09-14 14:50:16', NULL),
+(5, 'areyes', 'Ana Reyes', '2026-09-14 14:50:16', NULL);
 
 --
 -- Indexes for dumped tables
