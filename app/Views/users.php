@@ -43,7 +43,7 @@
                         <?php
                         $avatar =
                             !empty($user['avatar'])
-                            ? base_url('uploads/' . $user['avatar'])
+                            ? base_url('uploads/thumbs/' . $user['avatar'])
                             : base_url('uploads/placeholder.png');
                         ?>
 

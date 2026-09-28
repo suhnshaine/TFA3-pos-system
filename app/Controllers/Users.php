@@ -78,6 +78,11 @@ class Users extends BaseController
                 ROOTPATH . 'public/uploads',
                 $avatarName
             );
+
+            service('image')
+                ->withFile(ROOTPATH . 'public/uploads/' . $avatarName)
+                ->fit(150, 150, 'center')
+                ->save(ROOTPATH . 'public/uploads/thumbs/' . $avatarName);
         }
 
         $userModel->update($id, [
